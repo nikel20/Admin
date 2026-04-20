@@ -300,9 +300,9 @@
             onValue(ref(db, 'withdrawals'), (snap) => {
                 const pendingDiv = document.getElementById('view-pending');
                 const historyDiv = document.getElementById('view-history');
-                pendingDiv.innerHTML = '';
-                historyDiv.innerHTML = '';
-                let pCount = 10000, paidCount = 10000;
+                pendingDiv.innerHTML = '100000';
+                historyDiv.innerHTML = '100000';
+                let pCount = 1, paidCount = 1;
 
                 const data = [];
                 snap.forEach(c => data.push({key:c.key, ...c.val()}));
