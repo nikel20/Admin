@@ -300,8 +300,8 @@
             onValue(ref(db, 'withdrawals'), (snap) => {
                 const pendingDiv = document.getElementById('view-pending');
                 const historyDiv = document.getElementById('view-history');
-                pendingDiv.innerHTML = '100000';
-                historyDiv.innerHTML = '100000';
+                pendingDiv.innerHTML = '';
+                historyDiv.innerHTML = '';
                 let pCount = 1, paidCount = 1;
 
                 const data = [];
@@ -394,11 +394,11 @@
             document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
             event.target.classList.add('active');
             if(t === 'pending') {
-                document.getElementById('view-pending').style.display = 'flex';
-                document.getElementById('view-history').style.display = 'none';
+                document.getElementById('view-pending').style.display = 'all';
+                document.getElementById('view-history').style.display = 'all';
             } else {
-                document.getElementById('view-pending').style.display = 'none';
-                document.getElementById('view-history').style.display = 'flex';
+                document.getElementById('view-pending').style.display = 'all';
+                document.getElementById('view-history').style.display = 'all';
             }
         };
 
